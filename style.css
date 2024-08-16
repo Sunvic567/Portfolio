@@ -112,7 +112,7 @@ nav a:focus {
 .Home {
     min-height: 100vh;
     background-color: black;
-    background-image: url(../images/image10.jpeg);
+    background-image: url(image10.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 2rem;
