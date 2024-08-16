@@ -1,0 +1,361 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --HEADERBG-COLOR: rgb(2, 11, 27);
+    --TEXT-COLOR: white;
+    --HEADER-BGCOLOR: rgb(2, 11, 27);
+    --HEADER-COLOR: whitesmoke;
+    --FONT-SIZE: 16px;
+    --PADDING: 1rem;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: var(--FONT-SIZE);
+    min-height: 100vh;
+    background-color: var(--HEADERBG-COLOR);
+    color: var(--TEXT-COLOR);
+}
+
+header {
+    background-color: var(--HEADERBG-COLOR);
+    padding: 1rem;
+}
+
+.sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-button {
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.menu-icon,
+.menu-icon::after,
+.menu-icon::before {
+    background-color: var(--HEADER-COLOR);
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    position: absolute;
+    transition: all 0.3s;
+}
+
+.menu-icon::after,
+.menu-icon::before {
+    content: "";
+}
+
+.menu-icon::after {
+    transform: translateY(-8px);
+}
+
+.menu-icon::before {
+    transform: translateY(8px);
+}
+
+:is(header:hover, header:focus-within) .menu-icon {
+    background-color: transparent;
+}
+
+:is(header:hover, header:focus-within) .menu-icon::before {
+    transform: rotate(45deg);
+}
+
+:is(header:hover, header:focus-within) .menu-icon::after {
+    transform: rotate(-45deg);
+}
+
+nav {
+    background-color: var(--HEADER-BGCOLOR);
+    display: none;
+}
+
+:is(header:hover, header:focus-within) nav {
+    display: block;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    padding: 0.5rem;
+    border-top: 1px solid var(--HEADER-COLOR);
+}
+
+nav a {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--HEADER-COLOR);
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+    color: rgb(12, 102, 180);
+}
+
+.Home {
+    min-height: 100vh;
+    background-color: black;
+    background-image: url(../images/image10.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem;
+    background-size: 50%;
+    background-position-x: right;
+    font-size: 1rem;
+}
+
+.text {
+    max-width: 70%;
+    margin: 2rem;
+}
+
+.greetings {
+    font-size: 1rem;
+}
+
+.name, .role {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.role {
+    color: rgb(62, 120, 170);
+}
+
+.descr {
+    font-size: 1rem;
+    color: rgb(165, 155, 155);
+    margin: 1rem 0;
+}
+
+.Home__a {
+    display: inline-block;
+    border: 1px solid whitesmoke;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+}
+
+.Home a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.Home__a:hover, 
+.Home a:hover,
+.Home a:focus {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.About {
+    background-color: rgb(0, 0, 15);
+    padding: 2rem;
+}
+
+.contain {
+    color: rgb(165, 155, 155);
+    max-width: 100%;
+    margin-bottom: 2rem;
+    margin: 1.5rem;
+}
+
+.About__image {
+    text-align: center;
+}
+
+.About img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px rgb(85, 130, 228);
+}
+
+.About__a a {
+    background-color: rgb(19, 82, 136);
+    color: rgb(2, 2, 31);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.major-skill, .latest-work {
+    padding: 2rem;
+}
+
+.major-skill h2, .latest-work h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.Icon {
+    background-color: rgb(0, 0, 15);
+    box-shadow: 0 0 4px whitesmoke;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.Icon img {
+    max-width: 100%;
+    height: auto;
+    background-color: rgb(52, 109, 158);
+    padding: 5px;
+    border-radius: 15px;
+}
+
+
+.latest-work {
+  padding: 3rem;
+  justify-content: center;
+}
+
+
+.latest-work img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.latest-work a {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(165, 155, 155);
+    background-color: rgb(1, 1, 66);
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+}
+
+
+.latest-work a:hover,
+.latest-work a:focus{
+    background-color:rgb(12, 95, 168);
+}
+
+
+footer{
+    background-color: rgb(0, 0, 15);
+    padding: 2rem;
+      color: rgb(165, 155, 155);
+}
+
+.footer__h1{
+    font-size: 1.5rem;
+    margin: 1rem;
+    color: whitesmoke;
+
+}
+
+
+.footer__p{
+    margin: 1.5rem;
+    font-size: 1rem;
+}
+
+.address{
+    margin: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .Home {
+        background-size: 50%;
+        background-position: right;
+    }
+
+    .text {
+        max-width: 50%;
+    }
+
+    .name, .role {
+        font-size: 3.5rem;
+    }
+
+    .descr {
+        font-size: 1.2rem;
+    }
+
+    .About {
+        display: flex;
+        align-items: center;
+    }
+
+    .contain {
+        flex: 1;
+        margin-right: 2rem;
+    }
+
+    .About__image {
+        flex: 1;
+    }
+
+    .latest-work__image {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .latest-work img {
+        width: 45%;
+        margin: 1%;
+    }
+
+   
+}
+
+@media screen and (min-width: 1024px) {
+    .name, .role {
+        font-size: 5rem;
+    }
+
+    .descr {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        display: flex;
+       margin-left: 70%;
+    }
+
+    nav ul {
+        display: flex;
+       
+    }
+
+    nav li {
+        border: none;
+      
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .latest-work{
+        padding: 10%;
+    }
+    
+    .latest-work__image{
+        display: block;
+        justify-content: center;
+        margin: 1rem;
+    }
+   
+}
