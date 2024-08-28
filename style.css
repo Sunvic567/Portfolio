@@ -228,20 +228,34 @@ nav a:focus {
   justify-content: center;
 }
 
+.latest-work__image{
+    box-shadow: 1px 1px 3px rgb(85, 130, 228);
+    margin: 1rem 0;
+    padding: 20px;
+    background-color: transparent;
+     text-align: center;
+     border-radius: 15px;
+     line-height: 1.5;
+}
+
 
 .latest-work img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     margin-bottom: 1rem;
 }
 
+.latest-work span{
+    font-size: 1rem;
+}
+
 .latest-work a {
-    display: inline-block;
+    font-size: 0.7rem;
     text-decoration: none;
     color: rgb(165, 155, 155);
-    background-color: rgb(1, 1, 66);
     padding: 0.5rem 1rem;
     border-radius: 15px;
+    background-color: rgb(1, 1, 66);
 }
 
 
@@ -274,7 +288,7 @@ footer{
     margin: 1.5rem;
 }
 
-@media screen and (min-width: 768px) {
+ @media screen and (min-width: 768px) {
     .Home {
         background-size: 50%;
         background-position: right;
@@ -306,11 +320,11 @@ footer{
         flex: 1;
     }
 
-    .latest-work__image {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+    /* .latest-work__image {
+         display: flex;
+        flex-wrap: nowrap;
+        justify-content: center; 
+    } */
 
     .latest-work img {
         width: 45%;
@@ -318,7 +332,7 @@ footer{
     }
 
    
-}
+} 
 
 @media screen and (min-width: 1024px) {
     .name, .role {
@@ -349,13 +363,20 @@ footer{
     }
 
     .latest-work{
-        padding: 10%;
+        padding: 5%;
+        display: flex;
+        
     }
     
-    .latest-work__image{
-        display: block;
-        justify-content: center;
-        margin: 1rem;
+    .latest-work h2{
+        margin-left: -20px;
+        text-align: center;
+        font-size: 3rem;
     }
+     .latest-work__image{
+
+        margin: 0 20px;
+        line-height: 2;
+    } 
    
 }
